@@ -10,14 +10,24 @@ body {
   width: 350px;
 }
 
+hr {
+  width: 80%;
+  border: 5px solid #bcb8bb;
+}
+
 h1 {
   text-align: center;
   font-size: 2em;
   color: #bcb8bb;
 }
 
+.dashboard-left {
+  margin-left: 15em;
+}
+
 .panel {
-  width: 14em;
-  height: 14em;
+  width: 20em;
+  height: 12em;
   background-color: #262632;
+  margin: 2em;
 }
