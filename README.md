@@ -3,6 +3,7 @@ Proyecto para el curso de desarrollo web de la UTN
 
 UPDATE 29-08:
 Link del branch master donde voy a ir subiendo cambios: https://kaenovsky.github.io/utnwebproject/
+
 Mockup diseñado en clase: https://pasteboard.co/HBqU4jp.jpg
 
 ---
