@@ -10,15 +10,28 @@ body {
   width: 350px;
 }
 
-hr {
-  width: 80%;
-  border: 5px solid #bcb8bb;
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2em;
+ .title p {
+  font-size: 3em;
   color: #bcb8bb;
+  display: inline;
+  margin: 0.2em 0 0.2em 0.3em;
+}
+
+.title img {
+  width: 50px;
+  margin: 0 5px 0 0;
+}
+
+hr {
+  width: 65%;
+  border: 3px solid #bcb8bb;
 }
 
 .dashboard-left {
