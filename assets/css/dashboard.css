@@ -53,11 +53,31 @@ hr {
   margin-left: 1em;
   margin-top: 1em;
   font-size: 1.6em;
+  font-weight: 700;
 }
 
 .panel p {
   color: white;
   text-align: center;
+  font-weight: 300;
   margin-top: 30px;
   font-size: 3.8em;
+}
+
+.city-list {
+  color: #151422;
+}
+
+.city-list h3 {
+  font-size: 1.6em;
+  margin-left: 1em;
+  margin-top: 1em;
+  font-weight: 700;
+}
+
+ol {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-left: 2em;
+  margin-top: 1em;
 }
