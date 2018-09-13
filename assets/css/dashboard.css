@@ -47,3 +47,17 @@ hr {
   background-color: #bdb8bc;
   margin: 10px 10px;
 }
+
+.panel h3 {
+  color: white;
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 1.6em;
+}
+
+.panel p {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 3.8em;
+}
