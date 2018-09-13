@@ -1,6 +1,13 @@
 # utnwebproject
 Proyecto para el curso de desarrollo web de la UTN
 
+UPDATE 29-08:
+Link del branch master donde voy a ir subiendo cambios: https://kaenovsky.github.io/utnwebproject/
+
+Mockup diseñado en clase: https://pasteboard.co/HBqU4jp.jpg
+
+---
+
 ## Descripción y alcance del proyecto
 Para aprovechar las características del curso voy a desarrollar una página
 funcional que se conecte con el backend de una startup para obtener información
