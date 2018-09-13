@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Alpogo KPI dashboard</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./assets/css/dashboard.css">
      <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   </head>
   <body>
 
-    <div class="header">
+    <div class="header container">
       <a href="https://alpogo.com" target="_blank" ><img src="./assets/img/logo-alpogo.png" alt="logo alpogo"></a>
     </div>
       <div class="title"><img src="./assets/img/speedometer.svg" alt="icon">
@@ -18,18 +22,79 @@
 
     <hr>
 
-    <div class="dashboard-left">
-      <div class="panel">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+
+      <!-- columna panel izquierda -->
+
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                  <div class="dashboard-left">
+                    <div class="panel">
+
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                  <div class="dashboard-right">
+                    <div class="panel">
+
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+
+
+    <div class="container">
+      <div class="row">
+
+          <div class="col-lg-3">
+                <div class="dashboard-left">
+                  <div class="panel">
+
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-3 ">
+                <div class="dashboard-right">
+                  <div class="panel">
+
+                  </div>
+                </div>
+          </div>
+        </div>
 
       </div>
-      <div class="panel">
+
+
+    </div>
+
+    <!-- columna panel derecho -->
+
+    <div class="col-lg-6">
+      <div class="panel-long">
 
       </div>
     </div>
 
-    <div class="dashboard-right">
 
-    </div>
+  </div>
+</div>
+
+
+    <!-- jquery CDN -->
+
+    <script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   </body>
 </html>
