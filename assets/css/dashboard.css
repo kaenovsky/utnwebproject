@@ -1,7 +1,11 @@
 body {
   background-color: #151422;
   font-family: Roboto;
-  width: 100%;
+
+}
+
+.wrapper {
+
 }
 
 .header img {
@@ -21,12 +25,12 @@ body {
   font-size: 3em;
   color: #bcb8bb;
   display: inline;
-  margin: 0.2em 0 0.2em 0.3em;
+  margin: 50px;
 }
 
 .title img {
   width: 50px;
-  margin: 0 5px 0 0;
+  margin: 0;
 }
 
 hr {
