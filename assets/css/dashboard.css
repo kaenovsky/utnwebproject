@@ -1,29 +1,11 @@
-body {
-  background-color: #151422;
-  font-family: Roboto;
+* {
+    margin: 0;
 }
 
-.status-box {
-  width: 100%;
-  height: 50px;
-  background-color: #000;
-  padding-top: 15px;
-}
-
-.status-box p {
-  display: inline;
-  color: white;
-  text-align: center;
-  margin-left: 140px;
-  margin-right: 50px;
-}
-
-#site-status {
-  color: green;
-}
-
-#api-status {
-  color: yellow;
+html, body {
+    height: 100%;
+    background-color: #151422;
+    font-family: Roboto;
 }
 
 .header img {
@@ -102,4 +84,44 @@ ol {
   font-weight: 300;
   margin-left: 1em;
   margin-top: 1em;
+}
+
+/* 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #000;
+}
+
+footer .container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+} */
+
+/*
+.status-box {
+  width: 100%;
+  height: 50px;
+
+  padding-top: 15px;
+}
+
+.status-box p {
+  display: inline;
+  color: white;
+  text-align: center;
+  margin-left: 140px;
+  margin-right: 50px;
+} */
+
+#site-status {
+  color: green;
+}
+
+#api-status {
+  color: yellow;
 }
