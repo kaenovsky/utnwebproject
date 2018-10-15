@@ -8,6 +8,53 @@ html, body {
     font-family: Roboto;
 }
 
+
+/* ========= Landing style ========= */
+
+.item h3 {
+  font-size: 20px;
+}
+
+.go-to-dash {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.go-to-dash h2 {
+  font-size: 30px;
+  display: inline;
+  color: #ddd;
+  margin-right: 20px;
+}
+
+.go-to-dash a {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width:768px) {
+
+  .carousel-caption {
+    height: 100%;
+  }
+
+  .align-col {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .item h3 {
+    font-size: 90px;
+  }
+}
+
+/* ========= App style ========= */
+
 .header img {
   margin: 0 auto;
   display: block;
@@ -32,13 +79,6 @@ html, body {
   width: 50px;
   margin: 0;
 }
-
-/*
-hr {
-  width: 75%;
-  text-align: center;
-  border: 3px solid #bcb8bb;
-} */
 
 .panel {
   width: 100%;
@@ -86,38 +126,6 @@ ol {
   margin-top: 1em;
 }
 
-/*
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  line-height: 70px;
-  background-color: #000;
-}
-
-footer .container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-} */
-
-/*
-.status-box {
-  width: 100%;
-  height: 50px;
-
-  padding-top: 15px;
-}
-
-.status-box p {
-  display: inline;
-  color: white;
-  text-align: center;
-  margin-left: 140px;
-  margin-right: 50px;
-} */
-
 #site-status {
   color: green;
 }
@@ -128,20 +136,16 @@ footer .container {
 
 /* ========= Login style ========= */
 
-.warning-sign {
-  width: 100%;
-  height: 25px;
-  background-color: black;
-  color: #c41524;
-}
-
-.warning-sign p {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+.alert {
+  text-align: center;
 }
 
 .login {
+  height: 75vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   color: #ddd;
   padding: 1em;
   margin: 0 auto;
@@ -165,9 +169,13 @@ form {
   text-align: center;
 }
 
-.footer-login img {
+.login img {
   width: 250px;
-  margin-top: 5em;
+}
+
+.alpogo-logo {
+  display: block;
+  text-align: center;
 }
 
 @media screen and (min-width:768px) {
