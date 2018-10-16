@@ -8,7 +8,6 @@ html, body {
     font-family: Roboto;
 }
 
-
 /* ========= Landing style ========= */
 
 .item h3 {
@@ -16,7 +15,7 @@ html, body {
 }
 
 .go-to-dash {
-  margin-top: 30px;
+  height: 100px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -34,6 +33,45 @@ html, body {
   width: 120px;
   margin-bottom: 10px;
 }
+
+.benefits {
+  width: 100%;
+  background-color: #e06091;
+}
+
+.box-benefit {
+  width: 400px;
+  height: 200px;
+  background-color: #ddd;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.box-benefit img {
+  width: 50px;
+}
+
+.love {
+  height: 100px;
+  color: #ddd;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.love h3 {
+  font-size: 20px;
+  display: inline;
+}
+
+.love img {
+  width: 40px;
+  margin: 20px;
+}
+
+/* Media Queries */
 
 @media screen and (min-width:768px) {
 
