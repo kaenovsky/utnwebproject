@@ -15,6 +15,8 @@ html, body {
 }
 
 .go-to-dash {
+  background-color: #F37B75;
+  width: 100%;
   height: 100px;
   display: flex;
   flex-flow: column;
@@ -25,7 +27,7 @@ html, body {
 .go-to-dash h2 {
   font-size: 30px;
   display: inline;
-  color: #ddd;
+  color: white;
   margin-right: 20px;
 }
 
@@ -36,21 +38,23 @@ html, body {
 
 .benefits {
   width: 100%;
-  background-color: #F37B75;
+  background-color: #B49BC8;
 }
 
 .box-benefit {
-  width: 400px;
-  height: 200px;
-  background-color: #ddd;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #ddd;
+  color: #1E3264;
+  padding: 20px;
   margin: 20px;
-  padding: 10px;
   border-radius: 12px;
   text-align: center;
 }
 
 .box-benefit img {
   width: 50px;
+  margin-top: 25px;
 }
 
 .love {
