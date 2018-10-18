@@ -62,6 +62,7 @@ html, body {
   color: #ddd;
   font-size: 25px;
   margin: 0 auto;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -73,6 +74,16 @@ html, body {
 .love img {
   width: 40px;
   margin: 20px;
+}
+
+.sponsors {
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+}
+
+.sponsors img {
+  width: 200px;
 }
 
 /* Media Queries */
@@ -93,9 +104,6 @@ html, body {
   .item h3 {
     font-size: 90px;
   }
-}
-
-@media screen and (min-width:768px) {
 
   .box-benefit {
     width: 75%;
