@@ -113,6 +113,15 @@ html, body {
   }
 }
 
+@media screen and (max-width:480px) {
+
+  .go-to-dash a {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+}
+
 /* ========= App style ========= */
 
 .header img {
