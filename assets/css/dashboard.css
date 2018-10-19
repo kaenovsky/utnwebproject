@@ -33,7 +33,6 @@ html, body {
 
 .go-to-dash a {
   width: 150px;
-  /* margin-bottom: 10px; */
 }
 
 .benefits {
@@ -50,11 +49,14 @@ html, body {
   margin: 20px;
   border-radius: 12px;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .box-benefit img {
   width: 100px;
-  margin-top: 25px;
 }
 
 .love {
@@ -113,31 +115,46 @@ html, body {
   }
 }
 
-
-
 @media screen and (max-width:768px) {
 
   .item h3 {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .item p {
     display: none;
   }
 
+  .box-benefit {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:420px) {
 
-  .go.to-dash {
-
+  .item h3 {
+    font-size: 15px;
   }
 
-  .go-to-dash a {
-    width: 120px;
-    margin-top: 10px;
+  .go-to-dash h2 {
+    font-size: 23px;
   }
 
+  .box-benefit h2 {
+    font-size: 20px;
+  }
+
+  .box-benefit p {
+    font-size: 12px;
+  }
+
+  .box-benefit img {
+    width: 60px;
+  }
 }
 
 /* ========= App style ========= */
