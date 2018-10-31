@@ -16,6 +16,13 @@
 
 <body>
 
+<?php
+  $usersTotal = 4502;
+  $salesToday = 12698;
+  $activeEvents = 103;
+  $eventsToday = 6;
+ ?>
+
     <div class="header">
       <a href="https://alpogo.com" target="_blank" ><img src="./assets/img/logo-alpogo.png" alt="logo alpogo"></a>
 
@@ -46,7 +53,6 @@
                   <div class="panel">
                     <h3>Users</h3>
                   <?php
-                      $usersTotal = 4002;
                       echo "<p>$usersTotal</p>";
                    ?>
                   </div>
@@ -57,7 +63,6 @@
                   <div class="panel">
                     <h3>Sales today</h3>
                     <?php
-                        $salesToday = 12698;
                         echo "<p>$$salesToday</p>";
                      ?>
                   </div>
@@ -75,7 +80,6 @@
                   <div class="panel">
                     <h3>Active events</h3>
                     <?php
-                        $activeEvents = 103;
                         echo "<p>$activeEvents</p>";
                      ?>
                   </div>
@@ -86,7 +90,6 @@
                   <div class="panel">
                     <h3>Events today</h3>
                     <?php
-                        $eventsToday = 5;
                         echo "<p>$eventsToday</p>";
                      ?>
                   </div>
