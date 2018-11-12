@@ -17,10 +17,30 @@
 <body>
 
 <?php
-  $usersTotal = 4502;
-  $salesToday = 12698;
-  $activeEvents = 103;
+
+  $servername = "localhost";
+  $username = "admin";
+  $password = "P5iFnp1jyoYN";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, "alpogotest");
+
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  echo "<p class='database-status'>Database is working fine!</p>";
+
+  $activeEventsQuery = $conn->query("SELECT count(*) FROM eventos WHERE estado = 'activo'");
+  $activeEvents = $activeEventsQuery->fetch_array();
+
+  $usersTotalQuery = $conn->query("SELECT count(*) FROM auth_users WHERE active = '1'");
+  $usersTotal = $usersTotalQuery->fetch_array();
+
   $eventsToday = 6;
+
+  $salesToday = 12698;
+
  ?>
 
     <div class="header">
@@ -53,7 +73,7 @@
                   <div class="panel">
                     <h3>Users</h3>
                   <?php
-                      echo "<p>$usersTotal</p>";
+                      echo "<p>$usersTotal[0]</p>";
                    ?>
                   </div>
                 </div>
@@ -80,7 +100,7 @@
                   <div class="panel">
                     <h3>Active events</h3>
                     <?php
-                        echo "<p>$activeEvents</p>";
+                        echo "<p>$activeEvents[0]</p>";
                      ?>
                   </div>
                 </div>
