@@ -18,18 +18,7 @@
 
 <?php
 
-  $servername = "localhost";
-  $username = "admin";
-  $password = "P5iFnp1jyoYN";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, "alpogotest");
-
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  echo "<p class='database-status'>Database is working fine!</p>";
+  include_once 'includes/db.php'
 
   $activeEventsQuery = $conn->query("SELECT count(*) FROM eventos WHERE estado = 'activo'");
   $activeEvents = $activeEventsQuery->fetch_array();
