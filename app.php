@@ -31,7 +31,8 @@
   $eventsTodayQuery = $conn->query("SELECT count(*) FROM eventos WHERE fecha LIKE '%$today%'");
   $eventsToday = $eventsTodayQuery->fetch_array();
 
-  $salesToday = 12698;
+  $salesTodayQuery = $conn->query("SELECT SUM(pagado) AS totalsum FROM eventos_codigos WHERE estado = 'pagado' AND fecha_creacion LIKE '%$today%'");
+  $salesToday = $salesTodayQuery->fetch_array();
 
  ?>
 
@@ -49,8 +50,6 @@
       </div>
 
     </div>
-
-    <!-- <hr> -->
 
     <div class="container">
       <div class="row">
@@ -75,7 +74,7 @@
                   <div class="panel">
                     <h3>Sales today</h3>
                     <?php
-                        echo "<p>$$salesToday</p>";
+                        echo "<p>$salesToday[0]</p>";
                      ?>
                   </div>
                 </div>
