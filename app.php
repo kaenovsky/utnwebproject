@@ -17,10 +17,23 @@
 <body>
 
 <?php
-  $usersTotal = 4502;
-  $salesToday = 12698;
-  $activeEvents = 103;
-  $eventsToday = 6;
+
+  include_once 'includes/db.php'
+
+  $activeEventsQuery = $conn->query("SELECT count(*) FROM eventos WHERE estado = 'activo'");
+  $activeEvents = $activeEventsQuery->fetch_array();
+
+  $usersTotalQuery = $conn->query("SELECT count(*) FROM auth_users WHERE active = '1'");
+  $usersTotal = $usersTotalQuery->fetch_array();
+
+  $today = date("Y-m-d");
+
+  $eventsTodayQuery = $conn->query("SELECT count(*) FROM eventos WHERE fecha LIKE '%$today%'");
+  $eventsToday = $eventsTodayQuery->fetch_array();
+
+  $salesTodayQuery = $conn->query("SELECT SUM(pagado) AS totalsum FROM eventos_codigos WHERE estado = 'pagado' AND fecha_creacion LIKE '%$today%'");
+  $salesToday = $salesTodayQuery->fetch_array();
+
  ?>
 
     <div class="header">
@@ -38,8 +51,6 @@
 
     </div>
 
-    <!-- <hr> -->
-
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -53,7 +64,7 @@
                   <div class="panel">
                     <h3>Users</h3>
                   <?php
-                      echo "<p>$usersTotal</p>";
+                      echo "<p>$usersTotal[0]</p>";
                    ?>
                   </div>
                 </div>
@@ -63,7 +74,7 @@
                   <div class="panel">
                     <h3>Sales today</h3>
                     <?php
-                        echo "<p>$$salesToday</p>";
+                        echo "<p>$salesToday[0]</p>";
                      ?>
                   </div>
                 </div>
@@ -80,7 +91,7 @@
                   <div class="panel">
                     <h3>Active events</h3>
                     <?php
-                        echo "<p>$activeEvents</p>";
+                        echo "<p>$activeEvents[0]</p>";
                      ?>
                   </div>
                 </div>
@@ -90,7 +101,7 @@
                   <div class="panel">
                     <h3>Events today</h3>
                     <?php
-                        echo "<p>$eventsToday</p>";
+                        echo "<p>$eventsToday[0]</p>";
                      ?>
                   </div>
                 </div>
