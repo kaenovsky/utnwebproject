@@ -26,7 +26,10 @@
   $usersTotalQuery = $conn->query("SELECT count(*) FROM auth_users WHERE active = '1'");
   $usersTotal = $usersTotalQuery->fetch_array();
 
-  $eventsToday = 6;
+  $today = date("Y-m-d");
+
+  $eventsTodayQuery = $conn->query("SELECT count(*) FROM eventos WHERE fecha LIKE '%$today%'");
+  $eventsToday = $eventsTodayQuery->fetch_array();
 
   $salesToday = 12698;
 
@@ -99,7 +102,7 @@
                   <div class="panel">
                     <h3>Events today</h3>
                     <?php
-                        echo "<p>$eventsToday</p>";
+                        echo "<p>$eventsToday[0]</p>";
                      ?>
                   </div>
                 </div>
