@@ -8,6 +8,11 @@ html, body {
     font-family: Roboto;
 }
 
+.database-status {
+  color: white;
+  margin: 2px 2px;
+}
+
 /* ========= Landing style ========= */
 
 .item h3 {
@@ -159,9 +164,14 @@ html, body {
 
 /* ========= App style ========= */
 
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .header img {
   margin: 0 auto;
-  display: block;
   width: 350px;
 }
 
@@ -207,8 +217,12 @@ html, body {
   font-size: 3.8em;
 }
 
-.city-list {
-  width: 100%;
+.panel p.subtitle-data {
+    font-size: 12px;
+    margin: 1px;
+}
+
+.city-list {  
   height: 420px;
   color: #151422;
   background-color: #cec8ce;
@@ -237,6 +251,19 @@ ol {
 #api-status {
   color: yellow;
 }
+
+/* Media Queries app */
+
+@media screen and (max-width:768px) {
+
+  .title img {
+    display: none;
+  }
+  .title p {
+    font-size: 2em;
+  }
+}
+
 
 /* ========= Login style ========= */
 
