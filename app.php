@@ -19,29 +19,8 @@
 <?php
 
   include_once 'includes/db.php';
-
-  $activeEventsQuery = $conn->query("SELECT count(*) FROM eventos WHERE estado = 'activo'");
-  $activeEvents = $activeEventsQuery->fetch_array();
-
-  $usersTotalQuery = $conn->query("SELECT count(*) FROM auth_users WHERE active = '1'");
-  $usersTotal = $usersTotalQuery->fetch_array();
-
-  date_default_timezone_set('America/Argentina/Buenos_Aires');
-  // $today = date("Y-m-d");
-  $today = date("Y-m-d", strtotime("-2 days"));
-  $yesterday = date("Y-m-d", strtotime("-3 days"));
-
-  $eventsTodayQuery = $conn->query("SELECT count(*) FROM eventos WHERE fecha LIKE '%$today%'");
-  $eventsToday = $eventsTodayQuery->fetch_array();
-
-  $salesTodayQuery = $conn->query("SELECT SUM(pagado) AS totalsum FROM eventos_codigos WHERE estado = 'pagado' AND fecha_creacion LIKE '%$today%'");
-  $salesToday = $salesTodayQuery->fetch_array();
-
-  $ticketsTodayQuery = $conn->query("SELECT SUM(cantidad) AS totalsum FROM eventos_codigos WHERE estado = 'pagado' AND fecha_creacion LIKE '%$today%'");
-  $ticketsToday = $ticketsTodayQuery->fetch_array();
-
-  $ticketsYesterdayQuery = $conn->query("SELECT SUM(cantidad) AS totalsum FROM eventos_codigos WHERE estado = 'pagado' AND fecha_creacion LIKE '%$yesterday%'");
-  $ticketsYesterday = $ticketsYesterdayQuery->fetch_array();
+  include_once 'includes/dates.php';
+  include_once 'includes/queries.php';
 
  ?>
 
@@ -76,6 +55,7 @@
                     <h3>Users</h3>
                   <?php
                       echo "<p>$usersTotal[0]</p>";
+                      echo "<p class='subtitle-data'>Non active users: $usersInactiveTotal[0]</p>";
                    ?>
                   </div>
                 </div>
@@ -105,6 +85,7 @@
                     <h3>Active events</h3>
                     <?php
                         echo "<p>$activeEvents[0]</p>";
+                        echo "<p class='subtitle-data'>Past events: $pastEvents[0]</p>";
                      ?>
                   </div>
                 </div>
