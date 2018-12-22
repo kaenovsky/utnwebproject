@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>Alpogo KPI dashboard</title>
-  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/dashboard.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-</head>
-
-<body>
-
 <?php
 
+  session_start();
+
+  // if (!isset($_SESSION["username"])) {
+  // 	echo "No podes ingresar porque no estas logeado";
+  // 	exit();
+  // }
+
+  include_once 'includes/header.php';
   include_once 'includes/db.php';
   include_once 'includes/dates.php';
   include_once 'includes/queries.php';
 
- ?>
+?>
+
+ <body>
 
     <div class="header">
       <a href="https://alpogo.com" target="_blank" ><img src="./assets/img/logo-alpogo.png" alt="logo alpogo"></a>
@@ -38,8 +30,6 @@
       </div>
 
     </div>
-
-    <!-- <hr> -->
 
     <div class="container">
       <div class="row">
