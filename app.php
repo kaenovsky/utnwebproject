@@ -25,7 +25,7 @@
  ?>
 
     <div class="header">
-      <a href="https://alpogo.com" target="_blank" ><img src="./assets/img/logo-alpogo.png" alt="logo alpogo"></a>
+      <a href="https://alpogo.com" target="_blank" ><img src="./assets/img/logo-alpogo.png" alt="logo-alpogo"></a>
 
       <div class="container">
         <div class="row">
